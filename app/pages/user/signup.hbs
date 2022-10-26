@@ -1,7 +1,32 @@
-<form action="/user/signup" method="post">
+<!-- <form action="/user/signup" method="post">
   <h1>Sign up</h1>
   <input type="text" name="username" placeholder="Username" required>
   <input type="email" name="email" placeholder="Email" required>
   <input type="password" name="password" placeholder="Password" required>
   <button type="submit">Sign up</button>
-</form>
+</form> -->
+
+
+
+<div class=" flex items-center justify-center min-h-screen bg-gray-100 ">
+    <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg rounded-lg ">
+        <h3 class="text-2xl font-bold text-center">Sign Up</h3>
+        <form action="/user/signup" method="post">
+            <div >
+              <div class="mb-3.5">
+                  <input type="text" name="username" placeholder="Username" required>
+              </div >
+                <div class="my-3.5">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3.5">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="flex items-baseline justify-between">
+                    <button class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
