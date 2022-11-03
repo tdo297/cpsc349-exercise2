@@ -1,29 +1,38 @@
-<!-- <form action="/user/login" method="post">
-  <h1>Log in</h1>
-  <input type="text" name="username" placeholder="username" required>
-  <input type="password" name="password" placeholder="password" required>
-  <a href="/user/forgot">Forgot your password?</a>
-  <button type="submit">Log in</button>
-</form> -->
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Our App</title>
+</head>
 
-
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg">
-        <h3 class="text-2xl font-bold text-center">Sign Up</h3>
-        <form action="/user/login" method="post">
-            <div class="mt-4">
-              <div>
-                  <input type="text" name="username" placeholder="Username" required>
-              </div>
-                <div class="mt-4">
-                    <input type="password" name="password" placeholder="Password" required>
-                </div>
-                <div class="flex items-baseline justify-between">
-                    <button class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
-                    <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
-                </div>
+<body class="bg-gradient-to-br from-cyan-50 to-cyan-500">
+    <div class="w-screen h-screen flex justify-center items-center">
+        <form class="p-10 bg-white rounded-xl drop-shadow-lg space-y-5" action="/user/login" method="post">
+            <h1 class="text-center text-3xl">Log In</h1>
+            <div class="flex flex-col space-y-2">
+              <input class="w-96 px-3 py-2 rounded-md border border-slate-400" type="text" name="username" placeholder="Username" required>
             </div>
+            <div class="flex flex-col space-y-2">
+              <input class="w-96 px-3 py-2 rounded-md border border-slate-400"type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div>
+                <input type="checkbox" name="remember" id="remember" />
+                <label class="text-sm font-light" for="remember">Remember me</label>
+            </div>
+
+            <div>
+              <button class="w-full px-10 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 hover:drop-shadow-md duration-300 ease-in">Login</button>
+              <p class="text-left">
+                <a href="/user/forgot" class="text-blue-600 text-sm font-light hover:underline">Forgot password?</a>
+             </p>
+           </div>
         </form>
     </div>
-</div>
+</body>
+
+</html>
+
