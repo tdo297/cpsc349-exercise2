@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
-<body class="flex flex-col h-screen">
+<body class="flex flex-col h-screen bg-gradient-to-br from-cyan-50 to-cyan-500">
   {{#if currentUser}}
     <a href="/user/logout">Logout</a>
   {{else}}
@@ -16,6 +16,7 @@
     <a class="nav__button" href="/user/login">Log in</a> --}}
     <div class="flex flex-row h-20 items-center">
       <a class="ml-8" href="/"><p class="transition transform hover:scale-110 underline underline-offset-8">Main Menu</p></a>
+            <a class="ml-8" href="/login"><p class="transition transform hover:scale-110 underline underline-offset-8">Log In</p></a>
     </div>
   {{/if}}
   {{!-- Show errors --}}
