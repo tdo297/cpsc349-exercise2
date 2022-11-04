@@ -7,13 +7,16 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
-<body>
+<body class="flex flex-col h-screen">
   {{#if currentUser}}
     <a href="/user/logout">Logout</a>
   {{else}}
-    <a class="nav__button" href="/user/signup">Sign up</a>
+    {{!-- <a class="nav__button" href="/user/signup">Sign up</a>
     &nbsp;
-    <a class="nav__button" href="/user/login">Log in</a>
+    <a class="nav__button" href="/user/login">Log in</a> --}}
+    <div class="flex flex-row h-20 items-center">
+      <a class="ml-8" href="/"><p class="transition transform hover:scale-110 underline underline-offset-8">Main Menu</p></a>
+    </div>
   {{/if}}
   {{!-- Show errors --}}
   {{#if flashErrors }}

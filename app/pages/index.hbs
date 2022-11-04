@@ -1,8 +1,13 @@
-<h1>Welcome to my app!</h1>
-<ul>
-  {{#if currentUser}}
-    <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
-  {{else}}
-    <li><a href="/user/signup">Sign up for an account hello</a></li>
-  {{/if}}
-</ul>
+<div class="h-full flex justify-center items-center flex-col">
+  <h1 class="font-medium leading-tight text-5xl mt-0 mb-5 text-blue-600">Welcome to my app!</h1>
+  <div class="flex flex-col">
+    <ul>
+      {{#if currentUser}}
+        <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
+      {{else}}
+        <li><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition transform hover:scale-105"><a href="/user/signup">Sign up for an account!</a></li></button>
+      {{/if}}
+    </ul>
+  </div>
+</div>
+
