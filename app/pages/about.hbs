@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <header style="text-align:center; font-family: old english; font-size: 40px; color:black">
-
-        <h1>About Us</h1>
+    <script src="https://cdn.tailwindcss.com"></script>
     </header>
 
-    <body>
-        <div style="background-color: #5F9DF7; padding: 10px; border: 1px">
-        <h3> Team Members </h3>
-        <p> Chingsan Ly</p>
-        <p> Tristian Do</p>
-        <p> Wilson Tu</p>
-    </div>
-    <div style="background-color: #425F57; padding: 10px; border: 1px">
-        <h3>Vision Statement</h3>
-        <p> Our vision is to create a useful app which benefit everyone</p>
-    </div>
+    <body class="flex">
+        <div class="flex justify-center items-center flex-col">
+            <p class="text-6xl font-bold mt-24">About Us</p>
+            {{!-- <p class="font-medium">Hello, we are Group 13 for Project 2!</p>
+            <p class="font-medium">Our members consist of Chingsan Ly, Tristian Do, Wilson Tu! For our project we are building a web post-it board.</p> --}}
+        </div>
+        <div class="flex flex-wrap justify-center items-center flex-row h-screen">
+            <div class="profile-container transition ease-in-out hover:scale-110">
+                <div class="profile-container-picture w-80 h-80 bg-slate-300 rounded-md">
+                    <img class="w-80 h-80" src="../assets/images/chingsan-pic.jpg"/>
+                </div>
 
-    <div style="background-color: #FF731D; padding: 10px; border: 1px">
-        <h3>Personal Statement</h3>
-        <p> Our vision is to create a useful app which benefit everyone</p>
-    </div>
-    </body>
+                <div class="profile-container-name h-32 bg-slate-50 flex justify-center items-center flex-col">
+
+                    <p class="text-lg font-semibold text-cyan-500"> Chingsan Ly</p>
+                    <p class="text-lg font-semibold text-cyan-500">Undergraduate Senior</p>
+                                                            <p class="text-lg font-semibold text-cyan-500">Computer Science</p>
+                </div>
+                </div>
+                <div class="profile-container mr-16 ml-16 transition ease-in-out hover:scale-110">
+                    <div class="profile-container-picture w-80 h-64 bg-slate-300 rounded-md">THing</div>
+                    <div class="profile-container-name h-32 bg-slate-50 flex flex-col justify-center items-center">
+                                        <p class="text-lg font-semibold text-cyan-500"> Tristian Do</p>
+                                        <p class="text-lg font-semibold text-cyan-500">Undergraduate Senior</p>
+                                        <p class="text-lg font-semibold text-cyan-500">Computer Science</p>
+                    </div>
+                </div>
+                    <div class="profile-container transition ease-in-out hover:scale-110">
+                    <div class="profile-container-picture w-80 h-80 bg-slate-300 rounded-md">
+                                            <img class="w-80 h-80" src="../assets/images/wilson-pic.jpg"/>
+                    </div>
+                    <div class="profile-container-name h-32 bg-slate-50 flex flex-col justify-center items-center">
+                                        <p class="text-lg font-semibold text-cyan-500"> Wilson Tu</p>
+                                        <p class="text-lg font-semibold text-cyan-500">Undergraduate Senior</p>
+                                                                                <p class="text-lg font-semibold text-cyan-500">Computer Science</p>
+                    </div>
+                </div>
+
+ 
+            </div>
+        </body>
 </html>
