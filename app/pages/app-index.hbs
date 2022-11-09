@@ -1,15 +1,62 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline text-blue-700">
-    Hello world!
-  </h1>
-</body>
-<div>[[ Dynamic Remake code goes here]]</div>
-<br><br>
-<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple todo app</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sticky Note App</title>
+
+  </head>
+
+  <body class="bg-emerald-100">
+    <div>
+      <header class="h-20">
+        <div class="flex row-auto items-center justify-between rounded-md text-xl font-bold">
+          <div class="flex ">
+            <img height="50" width="50" src="/assets/images/sticky.jpeg">
+          </div>
+          
+          <nav>
+            <ul class="flex">
+              <li><a href="/">Home</a></li>
+              {{#if currentUser}}
+                <li class="flex pl-4"><a href="/user/logout">Log Out</a></li>
+              {{else}}
+                <li><a href="/user/signup">Sign up</a></li>
+              {{/if}}
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="h-20 flex justify-center text-2xl font-mono font-bold">
+          <span
+            object
+            key:display-name="@innerText"
+            edit:display-name:without-remove
+            >{{default displayName "YOUR NAME"}}</span>'s Sticky Note</h1>
+        <div>
+        <div class="space-y-9 space-x-9 flex flex-wrap justify-center"
+          array
+          key="topics"
+        >
+          {{#for topic in topics}}
+            <section class="font-mono shadow-xl py-8 px-8 border-4 border-amber-200 bg-opacity-100 bg-yellow-50 rounded-xl"
+              object
+              key:name="@search"
+            >
+              <div
+                target:name="@innerText"
+                edit:name
+              >{{default topic.name "Your note goes here..."}}</div>
+            </section>
+          {{/for}}
+        </div>
+        </div>
+        <button class="flex justify-between space-y-9 bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-full" new:topic>New Note</button>
+
+
+      </main>
+    </div>
+  </body>
 </html>
