@@ -3,45 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Put App Landing Page Name Here</title>
+    <title>Welcome to Sticky Note App</title>
 
     <style>
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .d-flex {
-        display: flex;
-      }
-      
-      .col {
-        flex-direction: column;
-      }
-      .justify-center {
-        justify-content: center;
-      }
-
-      .justify-between {
-        justify-content: space-between;
-      }
-
-      .align-center {
-        align-items: center;
-      }
-
-      .align-start {
-        align-items: flex-start;
       }
 
       .sm-padding {
         padding: 0 0.5rem;
       }
 
-      .container {
+
+      .container-2 {
         margin: 0 auto;
         height: 100%;
         max-width: 1440px;
       }
-
+      
       .spacer {
         margin: 20px 0;
       }
@@ -110,13 +89,13 @@
     <div>
       <header>
         <!-- logo -->
-        <div class="container sm-padding d-flex align-center justify-between">
-          <div class="logo d-flex">
+        <div class="container flex items-center justify-between">
+          <div class="logo flex">
             <img height="50" width="50" src="/assets/images/sticky.jpeg">
           </div>
 
           <nav>
-            <ul class="d-flex">
+            <ul class="flex">
               <li><a class="active" href="/">Home</a></li>
               {{#if currentUser}}
                 <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
@@ -126,7 +105,6 @@
                 <li><a class="nav__button" href="/user/login">Log in</a></li>
               {{/if}}
               <li><a href="/about">About</a></li>
-              <li>Blog</li>
             </ul>
           </nav>
         </div>
@@ -136,37 +114,30 @@
       </header>
 
       <main>
-        <!-- hero -->
         <section class="hero">
-          <div class="container sm-padding d-flex align-center justify-between">
-              <div class="left-container col d-flex align-start justify-center">
+          <div class="container-2 sm-padding flex items-center justify-between">
+              <div class="left-container flex-col flex items-start justify-center">
                 <!-- title -->
-                <h1 class="title">This app will help you to note down anything you want</h1>
+                <h1 class="title">Sticky Note - the note that never lost</h1>
                 <div class="spacer"></div>
-                <p class="subtitle">Description and say something about the app</p>
+                <p class="subtitle">Sometimes you never know the value of a moment until it becomes a memory</p>
                 <!-- call to action -->
                 <div class="spacer"></div>
 
                 <!-- if else statement -->
                 {{#if currentUser}}
-                <a class="btn hero-cta d-flex" href="/{{currentUser.details.username}}">Start Using The Sticky Note</a>
+                <a class="btn hero-cta flex" href="/{{currentUser.details.username}}">Start Using The Sticky Note</a>
                 {{else}}
-                <a class="btn hero-cta d-flex" href="/user/signup">Sign up</a>
+                <a class="btn hero-cta flex" href="/user/signup">Sign up</a>
                 {{/if}}
 
               </div>
-              <div class="right-container d-flex justify-center align-center">
+              <div class="right-container flex justify-center items-center">
                 <img height="50" src="/assets/images/note.png" alt="">
               </div>
           </div>
           
-          <!-- call to action -->
         </section>
-
-        <!-- what it is -->
-        <!-- demo -->
-        <!-- call to action 1 -->
-        <!-- social media -->
       </main>
       
       <footer>
